@@ -1,19 +1,3 @@
-let rounds = 1;
-
-while (rounds <= 5) {
-    let playerChoice = prompt("Select rock, paper, or scissors. Type q to quit");
-    //check to see if player wants to quit
-    if (playerChoice.toLowerCase() == "q") {
-        console.log("Thanks for playing");
-        start = false;
-    } else {
-        let computerChoice = computerPlay();
-        game(playerChoice, computerChoice);
-    }
-
-    rounds++;
-}
-
 function computerPlay() {
     //possible choices as an array
     const choices = ["rock", "paper", "scissors"];
@@ -23,7 +7,7 @@ function computerPlay() {
     return choices[choice];
 }
 
-function game(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     console.log("Rock paper scissors shoot...")
     console.log("Player played: " + playerSelection);
     console.log("Computer played: " + computerSelection);
@@ -38,3 +22,23 @@ function game(playerSelection, computerSelection) {
     }
     console.log("\n");
 }
+
+function game() {
+    let rounds = 1;
+
+    while (rounds <= 5) {
+        let playerChoice = prompt("Select rock, paper, or scissors. Type q to quit");
+        //check to see if player wants to quit
+        if (playerChoice.toLowerCase() == "q") {
+            console.log("Thanks for playing");
+            start = false;
+        } else {
+            let computerChoice = computerPlay();
+            playRound(playerChoice, computerChoice);
+        }
+
+        rounds++;
+    }
+}
+
+game();
