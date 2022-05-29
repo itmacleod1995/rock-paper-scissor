@@ -17,9 +17,8 @@ while (rounds <= 5) {
 function computerPlay() {
     //possible choices as an array
     const choices = ["rock", "paper", "scissors"];
-    //randomly choose a number between 1 and 3; this will be the index position of the choices array
+    //randomly choose a number between 0 and 2 inclusive; this will be the index position of the choices array
     let choice = Math.floor(Math.random() * 3);
-    console.log("choice is " + choice);
     //return either rock, paper, or scissors
     return choices[choice];
 }
