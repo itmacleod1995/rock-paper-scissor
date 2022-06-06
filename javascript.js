@@ -24,21 +24,19 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function game() {
-    let rounds = 1;
 
-    while (rounds <= 5) {
-        let playerChoice = prompt("Select rock, paper, or scissors. Type q to quit");
-        //check to see if player wants to quit
-        if (playerChoice.toLowerCase() == "q") {
-            console.log("Thanks for playing");
-            start = false;
-        } else {
-            let computerChoice = computerPlay();
-            playRound(playerChoice, computerChoice);
-        }
-
-        rounds++;
+    let playerChoice = prompt("Select rock, paper, or scissors. Type q to quit");
+    //check to see if player wants to quit
+    if (playerChoice.toLowerCase() == "q") {
+        console.log("Thanks for playing");
+        start = false;
+    } else {
+        let computerChoice = computerPlay();
+        playRound(playerChoice, computerChoice);
     }
+
+    rounds++;
+
 }
 
 game();
