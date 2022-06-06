@@ -17,7 +17,7 @@ h1 {
 }
 
 span {
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .buttons {
@@ -30,4 +30,12 @@ span {
 
 button {
     padding: 8px 20px;
+}
+
+.score {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    font-size: 25px;
 }
