@@ -21,13 +21,17 @@ function playRound(playerSelection, computerSelection) {
     console.log("\n");
 }
 
-const points = document.querySelector(".points");
-const score = document.querySelector(".score");
-let rounds = 1;
+const roundCounter = document.querySelector(".rounds");
+const round = document.querySelector(".round");
+let rounds = 0;
 
 const results = document.querySelector(".results");
 const playerChoice = document.querySelector(".playerResults");
 const compChoice = document.querySelector(".computerResults");
+
+
+
+
 
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
@@ -37,8 +41,8 @@ rock.addEventListener("click", function (e) {
         let computerChoice = computerPlay();
         playRound("rock", computerChoice);
         rounds++;
-        points.textContent = rounds;
-        score.appendChild(points);
+        roundCounter.textContent = rounds;
+        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose rock!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
         results.appendChild(playerChoice);
@@ -52,8 +56,8 @@ paper.addEventListener("click", function (e) {
         let computerChoice = computerPlay();
         playRound("paper", computerChoice);
         rounds++;
-        points.textContent = rounds;
-        score.appendChild(points);
+        roundCounter.textContent = rounds;
+        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose paper!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
         results.appendChild(playerChoice);
@@ -66,8 +70,8 @@ scissors.addEventListener("click", function (e) {
         let computerChoice = computerPlay();
         playRound("scissors", computerChoice);
         rounds++;
-        points.textContent = rounds;
-        score.appendChild(points);
+        roundCounter.textContent = rounds;
+        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose scissors!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
         results.appendChild(playerChoice);

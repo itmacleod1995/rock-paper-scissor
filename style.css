@@ -32,7 +32,7 @@ button {
     padding: 8px 20px;
 }
 
-.score {
+.round {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
