@@ -29,13 +29,17 @@ const results = document.querySelector(".results");
 const playerChoice = document.querySelector(".playerResults");
 const compChoice = document.querySelector(".computerResults");
 
-
-
-
-
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
+
+const playerSection = document.querySelector(".playerSection");
+const computerSection = document.querySelector("computerSection");
+const playerPoints = document.querySelector(".playerPoints");
+const computerPoints = document.querySelector(".computerPoints");
+
+
+
 rock.addEventListener("click", function (e) {
     if (e.target.classList[0] == "rock") {
         let computerChoice = computerPlay();
