@@ -23,34 +23,49 @@ function playRound(playerSelection, computerSelection) {
     console.log("\n");
 }
 
-function game() {
+const score = document.querySelector(".score");
 
-    let computerChoice = computerPlay();
-    const rock = document.querySelector(".rock");
-    const paper = document.querySelector(".paper");
-    const scissors = document.querySelector(".scissors");
-    rock.addEventListener("click", function (e) {
-        if (e.target.classList[0] == "rock") {
-            playRound("rock", computerChoice);
-        }
-    });
+let rounds = 1;
 
-    paper.addEventListener("click", function (e) {
-        if (e.target.classList[0] == "paper") {
-            playRound("paper", computerChoice);
-        }
-    });
+const rock = document.querySelector(".rock");
+const paper = document.querySelector(".paper");
+const scissors = document.querySelector(".scissors");
+rock.addEventListener("click", function (e) {
+    if (e.target.classList[0] == "rock") {
+        let computerChoice = computerPlay();
+        playRound("rock", computerChoice);
+        rounds++;
+        score.textContent = rounds;
+        document.body.append(score);
+    }
+});
 
-    scissors.addEventListener("click", function (e) {
-        if (e.target.classList[0] == "scissors") {
-            playRound("scissors", computerChoice);
-        }
-    });
+paper.addEventListener("click", function (e) {
+    if (e.target.classList[0] == "paper") {
+        let computerChoice = computerPlay();
+        playRound("paper", computerChoice);
+        rounds++;
+        score.textContent = rounds;
+        document.body.append(score);
+    }
+});
+
+scissors.addEventListener("click", function (e) {
+    if (e.target.classList[0] == "scissors") {
+        let computerChoice = computerPlay();
+        playRound("scissors", computerChoice);
+        rounds++;
+        score.textContent = rounds;
+        document.body.append(score);
+    }
+});
 
 
 
-}
 
 
 
-game();
+
+
+
+
