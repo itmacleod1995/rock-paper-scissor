@@ -8,9 +8,7 @@ function computerPlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-    console.log("Rock paper scissors shoot...")
-    console.log("Player played: " + playerSelection);
-    console.log("Computer played: " + computerSelection);
+
     if ((playerSelection.toLowerCase() == "rock" && computerSelection == "scissors")
         || (playerSelection.toLowerCase == "scissors" && computerSelection == "paper") || (playerSelection == "paper" &&
             computerSelection == "rock")) {
@@ -27,6 +25,10 @@ const points = document.querySelector(".points");
 const score = document.querySelector(".score");
 let rounds = 1;
 
+const results = document.querySelector(".results");
+const playerChoice = document.querySelector(".playerResults");
+const compChoice = document.querySelector(".computerResults");
+
 const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
@@ -37,6 +39,11 @@ rock.addEventListener("click", function (e) {
         rounds++;
         points.textContent = rounds;
         score.appendChild(points);
+        playerChoice.textContent = "Player chose rock!";
+        compChoice.textContent = "Computer chose " + computerChoice + "!";
+        results.appendChild(playerChoice);
+        results.appendChild(compChoice);
+
     }
 });
 
@@ -47,6 +54,10 @@ paper.addEventListener("click", function (e) {
         rounds++;
         points.textContent = rounds;
         score.appendChild(points);
+        playerChoice.textContent = "Player chose paper!";
+        compChoice.textContent = "Computer chose " + computerChoice + "!";
+        results.appendChild(playerChoice);
+        results.appendChild(compChoice);
     }
 });
 
@@ -57,6 +68,10 @@ scissors.addEventListener("click", function (e) {
         rounds++;
         points.textContent = rounds;
         score.appendChild(points);
+        playerChoice.textContent = "Player chose scissors!";
+        compChoice.textContent = "Computer chose " + computerChoice + "!";
+        results.appendChild(playerChoice);
+        results.appendChild(compChoice);
     }
 });
 
