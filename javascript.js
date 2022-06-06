@@ -25,18 +25,32 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
 
-    let playerChoice = prompt("Select rock, paper, or scissors. Type q to quit");
-    //check to see if player wants to quit
-    if (playerChoice.toLowerCase() == "q") {
-        console.log("Thanks for playing");
-        start = false;
-    } else {
-        let computerChoice = computerPlay();
-        playRound(playerChoice, computerChoice);
-    }
+    let computerChoice = computerPlay();
+    const rock = document.querySelector(".rock");
+    const paper = document.querySelector(".paper");
+    const scissors = document.querySelector(".scissors");
+    rock.addEventListener("click", function (e) {
+        if (e.target.classList[0] == "rock") {
+            playRound("rock", computerChoice);
+        }
+    });
 
-    rounds++;
+    paper.addEventListener("click", function (e) {
+        if (e.target.classList[0] == "paper") {
+            playRound("paper", computerChoice);
+        }
+    });
+
+    scissors.addEventListener("click", function (e) {
+        if (e.target.classList[0] == "scissors") {
+            playRound("scissors", computerChoice);
+        }
+    });
+
+
 
 }
+
+
 
 game();
