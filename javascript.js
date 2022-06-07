@@ -12,14 +12,15 @@ function playRound(playerSelection, computerSelection) {
     if ((playerSelection.toLowerCase() == "rock" && computerSelection == "scissors")
         || (playerSelection.toLowerCase == "scissors" && computerSelection == "paper") || (playerSelection == "paper" &&
             computerSelection == "rock")) {
-        //console.log("Player wins!");
         winner.textContent = "Player wins!";
+        ppoints++;
+        playerPoints.textContent = "Points: " + ppoints;
     } else if (playerSelection == computerSelection) {
-        //console.log("Tie!");
         winner.textContent = "Tie!";
     } else {
-        //console.log("Computer wins!");
         winner.textContent = "Computer wins!";
+        cpoints++;
+        computerPoints.textContent = "Points: " + cpoints;
     }
     console.log("\n");
 }
@@ -27,6 +28,9 @@ function playRound(playerSelection, computerSelection) {
 const roundCounter = document.querySelector(".rounds");
 const round = document.querySelector(".round");
 let rounds = 0;
+
+let ppoints = 0; //player points
+let cpoints = 0; //computer points
 
 const results = document.querySelector(".results");
 const playerChoice = document.querySelector(".playerResults");
