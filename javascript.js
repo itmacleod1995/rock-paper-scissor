@@ -46,12 +46,8 @@ rock.addEventListener("click", function (e) {
         playRound("rock", computerChoice);
         rounds++;
         roundCounter.textContent = rounds;
-        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose rock!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
-        results.appendChild(playerChoice);
-        results.appendChild(compChoice);
-
     }
 });
 
@@ -61,11 +57,8 @@ paper.addEventListener("click", function (e) {
         playRound("paper", computerChoice);
         rounds++;
         roundCounter.textContent = rounds;
-        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose paper!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
-        results.appendChild(playerChoice);
-        results.appendChild(compChoice);
     }
 });
 
@@ -75,11 +68,8 @@ scissors.addEventListener("click", function (e) {
         playRound("scissors", computerChoice);
         rounds++;
         roundCounter.textContent = rounds;
-        round.appendChild(roundCounter);
         playerChoice.textContent = "Player chose scissors!";
         compChoice.textContent = "Computer chose " + computerChoice + "!";
-        results.appendChild(playerChoice);
-        results.appendChild(compChoice);
     }
 });
 
