@@ -9,8 +9,8 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
 
-    if ((playerSelection.toLowerCase() == "rock" && computerSelection == "scissors")
-        || (playerSelection.toLowerCase == "scissors" && computerSelection == "paper") || (playerSelection == "paper" &&
+    if ((playerSelection == "rock" && computerSelection == "scissors")
+        || (playerSelection == "scissors" && computerSelection == "paper") || (playerSelection == "paper" &&
             computerSelection == "rock")) {
         winner.textContent = "Player wins!";
         ppoints++;
@@ -79,6 +79,23 @@ scissors.addEventListener("click", function (e) {
         compChoice.textContent = "Computer chose " + computerChoice + "!";
     }
 });
+
+//reset
+const resetButton = document.querySelector(".reset");
+
+function resetAll() {
+    roundCounter.textContent = 0;
+    playerChoice.textContent = "Player plays: None";
+    compChoice.textContent = "Computer plays: None";
+    playerPoints.textContent = "Points: 0";
+    computerPoints.textContent = "Points: 0";
+    winner.textContent = "Winner: None";
+    ppoints = 0;
+    cpoints = 0;
+    rounds = 0;
+}
+
+resetButton.addEventListener("click", resetAll);
 
 
 
