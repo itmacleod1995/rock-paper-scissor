@@ -52,3 +52,9 @@ button {
     display: flex;
     flex-direction: column;
 }
+
+.winnerSection p {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 30px;
+}

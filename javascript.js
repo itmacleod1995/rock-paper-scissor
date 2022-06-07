@@ -12,11 +12,14 @@ function playRound(playerSelection, computerSelection) {
     if ((playerSelection.toLowerCase() == "rock" && computerSelection == "scissors")
         || (playerSelection.toLowerCase == "scissors" && computerSelection == "paper") || (playerSelection == "paper" &&
             computerSelection == "rock")) {
-        console.log("Player wins!");
+        //console.log("Player wins!");
+        winner.textContent = "Player wins!";
     } else if (playerSelection == computerSelection) {
-        console.log("Tie!");
+        //console.log("Tie!");
+        winner.textContent = "Tie!";
     } else {
-        console.log("Computer wins!");
+        //console.log("Computer wins!");
+        winner.textContent = "Computer wins!";
     }
     console.log("\n");
 }
@@ -38,7 +41,7 @@ const computerSection = document.querySelector("computerSection");
 const playerPoints = document.querySelector(".playerPoints");
 const computerPoints = document.querySelector(".computerPoints");
 
-
+const winner = document.querySelector(".win");
 
 rock.addEventListener("click", function (e) {
     if (e.target.classList[0] == "rock") {
