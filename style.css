@@ -30,12 +30,13 @@ span {
 }
 
 button {
-    padding: 10px 25px;
+    padding: 40px 60px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
-    background-color: black;
     color: white;
-    border: none
+    border: none;
+    height: 200px;
+    width: 200px;
 }
 
 .round {
@@ -69,5 +70,27 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.rock {
+    background-image: url("images/rock.png");
+}
+
+.paper {
+    background-image: url("images/477922-200.png");
+}
+
+.scissors {
+    background-image: url("images/scissors.png");
+}
+
+.reset {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+    color: black;
+    border: none;
+    padding: 10px 10px;
+    height: 50px;
+    width: 70px;
 }
 
